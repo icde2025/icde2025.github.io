@@ -1,0 +1,133 @@
+/*======================================
+    Hero Area CSS
+========================================*/
+.hero-area {
+    position: relative;
+    background-color: $black;
+    padding: 200px 0 150px 0;
+    padding-bottom: 240px;
+    background-image: url('https://via.placeholder.com/1600x850');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media #{$md} {
+        padding: 110px 0 120px 0;
+    }
+
+    @media #{$xs} {
+        padding: 110px 0 60px 0;
+    }
+
+    .hero-content {
+        border-radius: 0;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 0 30px;
+
+        @media #{$xs} {
+            padding: 0;
+        }
+
+        @media #{$md} {
+            padding: 0px 140px;
+        }
+
+        h5 {
+            color: $white;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 18px;
+            font-size: 16px;
+            display: inline-block;
+            background: #ffffff24;
+            padding: 13px 22px;
+            border-radius: 4px;
+            box-shadow: 0px 0px 10px #00000005;
+
+            @media #{$md} {
+                font-size: 15px;
+                margin-bottom: 12px;
+            }
+
+            @media #{$xs} {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            i {
+                display: inline-block;
+                margin-right: 2px;
+            }
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 55px;
+            color: $white;
+            margin: 0px 0 18px;
+            text-transform: capitalize;
+            overflow: hidden;
+
+            @media #{$md} {
+                font-size: 30px;
+                line-height: 40px;
+            }
+
+            @media #{$xs} {
+                font-size: 25px;
+                line-height: 35px;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: $white;
+            margin: 28px 0;
+
+            @media #{$md} {
+                margin: 18px 0;
+                font-size: 15px;
+                line-height: 26px;
+            }
+
+            @media #{$xs} {
+                margin: 20px 0;
+                font-size: 15px;
+                line-height: 23px;
+            }
+        }
+
+        .button {
+            margin-top: 40px;
+
+            @media #{$md} {
+                margin-top: 10px !important;
+                width: 100%;
+            }
+
+            @media #{$xs} {
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            .btn {
+                background-color: $theme-color2;
+                color: $white;
+
+                &:hover {
+                    color: $theme-color2;
+                    background-color: $white;
+                }
+
+                @media #{$xs} {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

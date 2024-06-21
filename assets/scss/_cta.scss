@@ -1,0 +1,154 @@
+/*======================================
+    Call To Action CSS
+========================================*/
+.call-action {
+    background-image: url('https://via.placeholder.com/1920x650');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+    text-align: center;
+
+    @media #{$md} {
+        padding: 60px 0;
+    }
+
+    @media #{$xs} {
+        padding: 50px 0;
+    }
+
+    &.style2 {
+        padding: 70px 0;
+
+        .inner-content {
+            padding: 0;
+            text-align: left;
+        }
+
+        .text {
+            @media #{$xs} {
+                text-align: center;
+            }
+
+            h5 {
+                border: none;
+                padding: 0;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                font-size: 34px;
+                line-height: 42px;
+
+                @media #{$md} {
+                    font-size: 28px;
+                    line-height: 38px;
+                }
+
+                @media #{$xs} {
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+            }
+        }
+
+        .button {
+            float: right;
+            margin: 0;
+
+            @media #{$xs} {
+                float: none;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    &.overlay::before {
+        background: linear-gradient(45deg, $theme-color, $theme-color2);
+        opacity: 0.9;
+    }
+
+    .inner-content {
+        padding: 0px 100px;
+
+        @media #{$md} {
+            padding: 0 20px;
+        }
+
+        @media #{$xs} {
+            padding: 0;
+        }
+    }
+
+    .text {
+        h5 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 17px;
+            display: inline-block;
+            border: 2px solid #fff;
+            padding: 8px 25px;
+            border-radius: 30px;
+        }
+
+        h2 {
+            font-size: 37px;
+            font-weight: 700;
+            line-height: 45px;
+            color: $white;
+
+            @media #{$md} {
+                font-size: 28px;
+                line-height: 38px;
+            }
+
+            @media #{$xs} {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+
+        p {
+            color: $white;
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 20px;
+        }
+    }
+
+    .button {
+        margin-top: 40px;
+        display: inline-block;
+
+        .btn {
+            background-color: $white;
+            color: $black;
+            display: flex;
+            align-items: center;
+
+            i {
+                display: inline-block;
+                margin: 0;
+                margin-left: 0px;
+                margin-left: 8px;
+                font-size: 18px;
+            }
+
+            &:hover {
+                background-color: $theme-color2;
+                color: $white;
+            }
+
+            &.btn-alt {
+                &:hover {
+                    background-color: $black !important;
+                }
+            }
+        }
+
+        @media #{$xs} {
+            float: none;
+            margin-top: 20px;
+        }
+    }
+}

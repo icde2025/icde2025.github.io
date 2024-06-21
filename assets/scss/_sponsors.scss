@@ -1,0 +1,37 @@
+/*=============================
+	Sponsors CSS
+===============================*/
+.sponsors {
+    text-align: center;
+
+    .section-title {
+        margin-bottom: 70px;
+
+        @media #{$md} {
+            margin-bottom: 50px;
+        }
+
+        @media #{$xs} {
+            margin-bottom: 40px;
+        }
+    }
+
+    .single-sponsor {
+        padding: 20px 30px;
+        border-radius: 5px;
+        box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.103);
+        border: 1px solid #eee;
+        margin: 12px 10px;
+        line-height: 50px;
+        transition: all 0.4s ease;
+        background-color: $white;
+
+        &:hover {
+            box-shadow: none;
+        }
+
+        img {
+            width: 150px;
+        }
+    }
+}

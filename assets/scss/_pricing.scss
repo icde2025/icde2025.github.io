@@ -1,0 +1,252 @@
+/*=============================
+	Pricing Table CSS
+===============================*/
+.pricing-table {
+    background-image: url('https://via.placeholder.com/1920x1000');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.extra-page {
+        background-image: none;
+        background-color: $gray;
+    }
+
+    &.overlay:before {
+        background: linear-gradient(45deg, $theme-color, $theme-color2);
+        opacity: 0.9;
+    }
+
+    .section-title {
+        margin-bottom: 50px;
+
+        @media #{$md} {
+            margin-bottom: 30px;
+        }
+
+        @media #{$xs} {
+            margin-bottom: 20px;
+        }
+    }
+
+
+    .single-table {
+        border-radius: 6px;
+        margin-top: 40px;
+        background-color: $white;
+        transition: all 0.4s ease;
+        padding: 50px 35px;
+        text-align: center;
+        z-index: 0;
+        transition: all 0.4s ease;
+        position: relative;
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.048);
+
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.13);
+        }
+
+        &.middle {
+            .table-head {
+                .title {
+                    border-color: $theme-color2;
+                    color: $theme-color2;
+                }
+
+            }
+        }
+
+        .table-head {
+
+            .title {
+                font-size: 15px;
+                font-weight: 500;
+                margin-bottom: 25px;
+                color: #3080e3;
+                padding: 8px 20px;
+                border: 2px solid #3080e3;
+                display: inline-block;
+                border-radius: 30px;
+            }
+
+            p {
+                font-weight: 400;
+            }
+
+            .price {
+                padding-top: 20px;
+
+                .amount {
+                    font-size: 47px;
+                    font-weight: 600;
+                    display: inline-block;
+                    position: relative;
+                }
+            }
+
+        }
+
+
+        .button {
+            margin: 0;
+            margin-top: 30px;
+            margin-bottom: 40px;
+
+            .btn {
+                text-transform: none;
+                padding: 14px 35px;
+                position: relative;
+                box-shadow: none;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    left: -10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 20px;
+                    width: 20px;
+                    background-color: $white;
+                    border-radius: 50%;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    right: -10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 20px;
+                    width: 20px;
+                    background-color: $white;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .table-content {
+
+            .table-list {
+                li {
+                    position: relative;
+                    font-size: 15px;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    i {
+                        color: $theme-color;
+                        font-size: 14px;
+                        position: absolute;
+                        left: 0;
+                        top: 4px;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    &.style2 {
+        .single-table {
+            text-align: left;
+            padding: 40px;
+
+            &.middle {
+                .table-head {
+                    .title {
+                        color: $theme-color2;
+                    }
+                }
+            }
+
+            .table-head {
+                .title {
+                    color: $theme-color;
+                    border: none;
+                    padding: 0;
+                    text-transform: uppercase;
+                }
+
+                .price {
+                    padding-top: 0;
+
+                    .amount {
+                        font-size: 45px;
+                        font-weight: 600;
+
+                        .currency {
+                            font-weight: 500;
+                            color: #151515;
+                            font-size: 18px;
+                            position: absolute;
+                            left: 0;
+                            top: auto;
+                            bottom: 9px;
+                        }
+
+                        .duration {
+                            color: $black;
+                        }
+                    }
+                }
+            }
+
+            .table-list {
+                margin-top: 40px;
+
+                li {
+                    font-size: 15px;
+                    margin-bottom: 16px;
+                    padding-left: 25px;
+                    font-weight: 400;
+                    color: $black;
+                    position: relative;
+
+                    &::before {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        content: "\ea5a";
+                        font-family: lineIcons;
+                        color: #68D585;
+                        font-size: 15px;
+                    }
+
+                    &.disable {
+                        color: $body-color;
+
+                        &::before {
+                            color: $body-color;
+                            content: "\ea87";
+                        }
+                    }
+                }
+            }
+
+            .button {
+                margin: 0;
+                margin-top: 50px;
+
+                .btn {
+                    i {
+                        display: inline-block;
+                        font-size: 20px;
+                        margin-left: 10px;
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+            }
+
+            .no-card {
+                display: block;
+                margin-top: 15px;
+            }
+        }
+    }
+}

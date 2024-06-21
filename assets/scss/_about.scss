@@ -1,0 +1,200 @@
+/*======================================
+    About Us CSS
+========================================*/
+.about {
+    position: relative;
+    background-color: $black;
+    background-image: url('../images/about/about-bg.png');
+    background-size: contain;
+    background-repeat: repeat;
+    z-index: 0;
+
+    .about-image {
+        position: relative;
+
+        .video-head {
+            display: inline-block;
+            border-radius: 100%;
+            -webkit-transition: all 0.4s ease;
+            -moz-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .video-head .video {
+            height: 70px;
+            width: 70px;
+            line-height: 70px;
+            text-align: center;
+            background: $theme-color;
+            color: $white;
+            border-radius: 100%;
+            display: inline-block;
+            font-size: 20px;
+            padding-left: 5px;
+        }
+
+        .video-head .video:hover {
+            background: $theme-color2;
+            color: #fff;
+
+            &::before {
+                border-color: $theme-color2;
+            }
+
+            &::after {
+                border-color: $theme-color2;
+            }
+        }
+
+        .video-head .video:before {
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            border: 1px solid $theme-color;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            -webkit-animation: play-btn-1 1.8s linear infinite;
+            -moz-animation: play-btn-1 1.8s linear infinite;
+            -o-animation: play-btn-1 1.8s linear infinite;
+            animation: play-btn-1 1.8s linear infinite;
+        }
+
+        .video-head .video:after {
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            border: 1px solid $theme-color;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            -webkit-animation: play-btn-2 1.5s linear infinite;
+            -moz-animation: play-btn-2 1.5s linear infinite;
+            -o-animation: play-btn-2 1.5s linear infinite;
+            animation: play-btn-2 1.5s linear infinite;
+        }
+
+        /* Video Animations */
+        @keyframes play-btn-1 {
+            0% {
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: scale(1.5);
+                -moz-transform: scale(1.5);
+                -ms-transform: scale(1.5);
+                -o-transform: scale(1.5);
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes play-btn-2 {
+            0% {
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: scale(2);
+                -moz-transform: scale(2);
+                -ms-transform: scale(2);
+                -o-transform: scale(2);
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .content {
+        @media #{$laptop} {
+            padding-left: 50px;
+        }
+
+        @media #{$desktop} {
+            padding-right: 80px;
+        }
+
+        @media #{$md} {
+            margin-top: 40px;
+        }
+
+        @media #{$xs} {
+            margin-top: 40px;
+        }
+
+        h4 {
+            color: $white;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 48px;
+            color: $white;
+
+            @media #{$md} {
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 42px;
+            }
+
+            @media #{$xs} {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 34px;
+            }
+        }
+
+        p {
+            font-size: 15px;
+            margin-top: 25px;
+            color: $white;
+        }
+
+        .date {
+            h4 {
+                margin-top: 30px;
+                display: inline-block;
+                color: $white;
+
+                span {
+                    height: 45px;
+                    width: 45px;
+                    line-height: 45px;
+                    text-align: center;
+                    color: $white;
+                    background-color: $theme-color2;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
