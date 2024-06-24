@@ -136,6 +136,9 @@
     </section>
     <!-- End Hero Area -->
 
+
+    
+
     <!-- Start Count Down Area -->
     <div class="count-down">
         <div class="container">
@@ -144,7 +147,7 @@
                     <div class="box-head">
                         <div class="box-content">
                             <div class="box">
-                                <h1 id="days">000</h1>
+                                <h1 id="days">00</h1>
                                 <h2 id="daystxt">Days</h2>
                             </div>
                             <div class="box">
@@ -157,7 +160,7 @@
                             </div>
                             <div class="box">
                                 <h1 id="seconds">00</h1>
-                                <h2 id="secondstxt">Secondes</h2>
+                                <h2 id="secondstxt">Seconds</h2>
                             </div>
                         </div>
                     </div>
@@ -166,6 +169,45 @@
         </div>
     </div>
     <!-- End Count Down Area -->
+
+    <div id="countdown">
+    </div>
+    <script>
+        // Set the date you're counting down to
+        var countDownDate = new Date("May 19, 2025 09:00:00").getTime();
+    
+        // Update the countdown every 1 second
+        var x = setInterval(function() {
+    
+            // Get the current date and time
+            var now = new Date().getTime();
+    
+            // Calculate the remaining time
+            var distance = countDownDate - now;
+    
+            // Calculate days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+            // Display the countdown values in the HTML elements
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+    
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("days").innerHTML = "SEE";
+                document.getElementById("hours").innerHTML = "YOU";
+                document.getElementById("minutes").innerHTML = "IN";
+                document.getElementById("seconds").innerHTML = "HONG KONG";
+            }
+        }, 1000);
+    </script>
+
 
     <!-- Start Features Area -->
     <section class="features section">
