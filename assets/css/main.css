@@ -1225,13 +1225,14 @@ ol {
   text-align: justify;
   font-size: 18px;
   color: #333333;
+  margin: 0px 40px 0px 40px;
 }
 
 .justify-align-main {
   text-align: justify;
   font-size: 18px;
   color: #333333;
-  margin: 5px;
+  margin: 10px 5px 10px 5px;
 }
 
 
